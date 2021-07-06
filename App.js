@@ -1,13 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>Hello WW</Text>
+    <View style={styles.container}>
+      <View style={styles.carContainer}>
+        <ImageBackground source={require('./assets/images/ModelX.jpeg')}
+          style={styles.image}
+        />
+
+        <View style={styles.titles}>
+          <Text style={styles.title}>Model S</Text>
+          <Text style={styles.subtitle}>Starting at $69,420</Text>
+        </View>
+
+      </View>
+
       <StatusBar style="auto" />
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -18,4 +29,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  carContainer: {
+    width: '100%',
+    height: '100%',
+  },
+  titles: {
+    marginTop: '30%',
+    width: '100%',
+    alignItems: 'center',
+
+  },
+  title: {
+    fontSize: 40,
+    fontWeight: '600',
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#5c5e62'
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    position: 'absolute',
+  }
 });
