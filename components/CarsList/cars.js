@@ -4,8 +4,7 @@ export default [{
   image: require('../../assets/images/ModelS.jpeg'),
 }, {
   name: 'Model 3',
-  tagline: 'Order Online for',
-  taglineCTA: 'Touchless Delivery',
+  tagline: 'Starting at $99,420',
   image: require('../../assets/images/Model3.jpeg'),
 }, {
   name: 'Model X',
